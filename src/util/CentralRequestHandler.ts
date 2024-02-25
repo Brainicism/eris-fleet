@@ -47,7 +47,7 @@ export class CentralRequestHandler {
 			// timeout
 			const timeout = setTimeout(() => {
 				this.requests.delete(UUID);
-				reject(`Request timed out (>${this.timeout}ms)`);
+				reject(`Request timed out (>${this.timeout}ms) on ${method} ${url}`);
 			}, this.timeout);
 
 			const callback = (r: {resolved: boolean, value: unknown}) => {
