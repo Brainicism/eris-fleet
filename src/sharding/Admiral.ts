@@ -245,7 +245,7 @@ export interface Options {
 }
 
 export interface ShardStats {
-	latency: number;
+	latency: number | null;
 	id: number;
 	ready: boolean;
 	status: Eris.Shard["status"];
